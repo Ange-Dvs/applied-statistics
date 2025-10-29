@@ -13,4 +13,4 @@ Set merge as the mode for the pull git config pull.rebase false
 
 Initiate the pull of the GitHub repository git pull
 
-If the pull has been successful, you should see folders (dao, docs, html and sql_setup) and files (.gitignore, dbconfig.py, readme.md, requirements.txt and server.py).
+If the pull has been successful, you should see folders (XXXX) and files (XXXX).
