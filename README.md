@@ -1,42 +1,37 @@
 # applied_statistics
-Repo for Applied Statistics, Semester 4 module for Data Analytics H.Dip.
+Repo for Applied Statistics (Semester 4) module for Data Analytics H.Dip.
 The Jupyter notebook combines the theory, simulation, visualisation, and interpretation to demonstrate understanding of core statistical concepts.
 
+## Quick Start
 
-Cloning repository from GitHub
-Copy the following URL: https://github.com/Ange-Dvs/applied-statistics.git
+1. Open CMDER or if using VS Code open the terminal pane
 
-Open CMDER or if using VS Code open the terminal pane
+2. Clone this repo:   
+  ```git clone https://github.com/Ange-Dvs/applied-statistics.git```   
+  ```cd applied-statistics```
 
-Navigate to the folder where you want to clone the repository to on your machine and type git pull git clone https://github.com/Ange-Dvs/applied-statistics.git
+3. ```pip install -r requirements.txt```
 
-Set merge as the mode for the pull git config pull.rebase false
+4. Open the jupyter notebook
 
-Initiate the pull of the GitHub repository git pull
+## How to Run
 
-If the pull has been successful, you should see folders (XXXX) and files (XXXX).
+1. Ensure Python 3.9+ is installed
+2. Install required libraries (if missing):
 
-## Libraries Used
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Open the notebook:
 
-The following Python libraries are used throughout the notebook:
-
-> math – factorials and combinatorics
-
-> itertools – generating combinations
-
-> random – random sampling
-
-> numpy – numerical simulation and array operations
-
-> pandas – tabular summaries of results
-
-> matplotlib – plotting histograms and charts
-
-> scipy.stats – statistical tests (t-tests, ANOVA)
-
-All libraries are part of the standard scientific Python ecosystem.
+   ```bash
+   jupyter notebook
+   ```
+4. Run cells sequentially from top to bottom
 
 ## Repository Contents
+
+If the clone has been successful, you should see:
 
 * `problems.ipynb` 
   Main notebook containing:
@@ -47,6 +42,35 @@ All libraries are part of the standard scientific Python ecosystem.
   * Visualisations
   * Interpretation and discussion
 
+* `README.md`
+  *   Overview of the project structure, problem summaries, setup instructions, and usage guidance.
+
+* `requirements.txt`
+  *   Lists the Python dependencies required to run the notebook and reproduce the results.
+
+* `.gitignore`
+  *  Specifies files and folders to exclude from version control (e.g. virtual environments, cache files).
+
+
+## Libraries & Modules Used
+
+The following Python libraries and modules used throughout the notebook:
+
+> ``math`` – factorials and combinatorics [[1](https://docs.python.org/3/library/math.html)]
+
+> ``itertools`` – generating combinations [[2](https://docs.python.org/3/library/itertools.html)]
+
+> ``random`` – random sampling [[3](https://docs.python.org/3/library/random.html)]
+
+> ``numpy`` – numerical simulation and array operations [[4](https://numpy.org/doc/stable/)]
+
+> ``pandas`` – tabular summaries of results [[5](https://pandas.pydata.org/docs/)]
+
+> ``matplotlib`` – plotting histograms and charts [[6](https://matplotlib.org/stable/)]
+
+> ``scipy.stats`` – statistical tests (t-tests, ANOVA) [[7](https://docs.scipy.org/doc/scipy/reference/stats.html)]
+
+All libraries are part of the standard scientific Python ecosystem.
 
 ## Problem Overview
 
@@ -78,14 +102,15 @@ This problem extends Ronald Fisher’s classic *Lady Tasting Tea* experiment.
 #### Key Result
 
 * Original experiment:
-  ( P(4\ \text{correct}) = 1/70 \approx 1.43% )
+$P(\text{4 correct}) = \frac{1}{70} \approx 0.0143$
 
 * Extended experiment:
-  ( P(4\ \text{correct}) = 1/495 \approx 0.20% )
+$P(\text{4 correct}) = \frac{1}{495} \approx 0.0020$
+
 
 The extended design is **more stringent**, making perfect guessing substantially less likely by chance.
 
----
+<hr style="border: 1px dashed #999;">
 
 ### **Problem 2 – Sampling Distribution of the Standard Deviation**
 
@@ -115,7 +140,7 @@ The simulation is repeated for increasing sample sizes (30, 100, 2500), showing:
 * Reduced variability
 * Convergence of the two SD definitions as sample size increases
 
----
+<hr style="border: 1px dashed #999;">
 
 ### **Problem 3 – Type II Error and t-tests**
 
@@ -123,23 +148,23 @@ This problem investigates how the **Type II error rate** changes as the true mea
 
 #### Simulation Design
 
-* Two independent samples (n = 100)
-* Mean difference ( d = 0, 0.1, \dots, 1.0 )
-* 1,000 repetitions per value of ( d )
-* Independent two-sample t-test (α = 0.05)
+* Two independent samples ($n = 100$)
+* Mean difference ($d \in \{0, 0.1, \dots, 1.0\}$)
+* 1,000 repetitions per value of ($d$)
+* Independent two-sample $t$-test ($α = 0.05$)
 
 #### Output
 
 * Proportion of times the null hypothesis is **not rejected**
-* Line plot of Type II error rate vs ( d )
+* Line plot of Type II error rate vs ($d$)
 
 #### Interpretation
 
-* When ( d = 0 ), failure to reject is common
-* As ( d ) increases, the Type II error rate decreases
+* When ($d = 0$), failure to reject is common
+* As ($d$) increases, the Type II error rate decreases
 * Larger effect sizes increase test power
 
----
+<hr style="border: 1px dashed #999;">
 
 ### **Problem 4 – ANOVA vs Multiple t-tests**
 
@@ -163,7 +188,7 @@ This problem compares one-way ANOVA with multiple pairwise t-tests.
 * Multiple t-tests inflate the Type I error rate
 * ANOVA is the preferred approach when comparing more than two means
 
----
+<hr style="border: 1px dashed #999;">
 
 ## Key Statistical Concepts Demonstrated
 
@@ -175,24 +200,29 @@ This problem compares one-way ANOVA with multiple pairwise t-tests.
 * Statistical power
 * Multiple comparisons problem
 
----
+<hr style="border: 1px dashed #999;">
 
-## ▶How to Run
+## AI Tools
+Some aspects of this notebook were developed with the support of artificial intelligence (AI) tools, such as ChatGPT.
+AI was used as a supplementary aid to support concept clarification, code structuring, and explanatory writing, while all simulations, analysis decisions, and interpretations remain the author’s own.
 
-1. Ensure Python 3.9+ is installed
-2. Install required libraries (if missing):
+**The purpose of incorporating AI was to assist with:**
+- clarifying statistical concepts
+- checking code structure and readability
+- troubleshooting code
 
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Open the notebook:
+### Example prompts
 
-   ```bash
-   jupyter notebook
-   ```
-4. Run cells sequentially from top to bottom
+**Concept clarification**
+- Explain the difference between Type I and Type II errors in simple terms.
+- Why does the sample standard deviation use $𝑛−1$ instead of $𝑛$?
 
----
+**Troubleshooting**
+- Why is my Monte Carlo simulation result slightly different each time I rerun the notebook?
+- My histogram overlays look cluttered — how can I improve readability without changing the data?
+
+All analysis, simulations, and interpretations were carried out by the author.
+
 
 ## References
 
@@ -202,12 +232,29 @@ This problem compares one-way ANOVA with multiple pairwise t-tests.
 * Wasserstein et al. (2019) – Moving Beyond p < 0.05
 * Simply Psychology – Understanding p-values
 
----
 
-## Summary
+## References
 
-This notebook demonstrates how **simulation, probability, and hypothesis testing** work together to support statistical reasoning.
-Across all problems, results are interpreted in context, with careful discussion of assumptions, limitations, and best practices.
+* Fisher, R. A. (1935). *Lady tasting tea*. Wikipedia.  
+* *Null hypothesis*. Wikipedia.  
+* Kenton, W. (n.d.). *P-value*. Investopedia.  
+* Wasserstein, R. L., Schirm, A. L., & Lazar, N. A. (2020).  
+* Wasserstein, R. L., Schirm, A. L., & Lazar, N. A. (2019).  
+* Wasserstein, R. L., & Lazar, N. A. (2018).  
+* Benjamin, D. J., et al. (2018).  
+* *Statistical significance*. Wikipedia.  
+* Frost, J. (n.d.).  
+* McLeod, S. (n.d.).  
+* Penn State Eberly College of Science. (n.d.).  
+* DataCamp. (n.d.).  
+* *Statistical power*. Wikiversity.  
+* *Power (statistics)*. Wikipedia.  
+* *Multiple comparisons problem*. Wikipedia.  
+* Penn State Eberly College of Science. (n.d.).  
+* *Bonferroni correction*. Wikipedia.  
+
+Full references are provided inside the Jupyter notebook.
 
 
-
+***
+# END
