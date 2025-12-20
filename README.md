@@ -223,16 +223,6 @@ AI was used as a supplementary aid to support concept clarification, code struct
 
 All analysis, simulations, and interpretations were carried out by the author.
 
-
-## References
-
-* Fisher, R. A. (1935). *The Design of Experiments*
-* Wikipedia – Lady Tasting Tea
-* Penn State STAT 200
-* Wasserstein et al. (2019) – Moving Beyond p < 0.05
-* Simply Psychology – Understanding p-values
-
-
 ## References
 
 * Fisher, R. A. (1935). *Lady tasting tea*. Wikipedia.  
