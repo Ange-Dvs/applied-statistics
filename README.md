@@ -208,3 +208,6 @@ This problem compares one-way ANOVA with multiple pairwise t-tests.
 
 This notebook demonstrates how **simulation, probability, and hypothesis testing** work together to support statistical reasoning.
 Across all problems, results are interpreted in context, with careful discussion of assumptions, limitations, and best practices.
+
+
+
